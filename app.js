@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const stuffRoutes = require('./routes/stuff');
+const userRoutes = require('./routes/user');
 
 //const Product = require("./models/product");
 
@@ -31,6 +32,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/stuff', stuffRoutes);
+app.use('/api/auth', userRoutes);
 
 /*app.get("/api/products", (req, res, next) => {
   console.log("GET ALL");
