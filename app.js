@@ -33,6 +33,7 @@ app.use((req, res, next) => {
 
 app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
+app.use('/images', express.static(this.path.join(__dirname, 'images')));
 
 /*app.get("/api/products", (req, res, next) => {
   console.log("GET ALL");
